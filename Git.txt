@@ -1,0 +1,103 @@
+Commands to setup local repo:
+
+to set user name:
+git config --global user.name "Sujeet Kumar"
+
+to set email address:
+git config --global user.email "sujeetkumarofficial1@gmail.com"
+
+to check the git config:
+git config --list
+
+Commands to download from repo and update the repo:
+
+to clone a project from a git repo
+git clone <repo download link>
+
+status code- Display the status of code: 
+git status  
+
+After modifying the file we need to to run to commands i.e. add and commit:
+
+git add <--file name-->   :File will be in staged state after add command
+use "git restore --staged <file>..." to unstage)
+
+git add .     : for staging all the files that modified or untracked 
+
+git commit -m "some message"
+
+push Command: Upload local repo code to remote repo:
+git push origin main
+
+
+Commands when you're working on projects on your System
+
+git init
+git status
+git add .
+git commit -m "Added Initials Files"
+Create a repo on Github account
+git remote add origin <-link-: from the created repo>
+git remote -v (to verify remote)
+git branch (to check branch)
+git brach -M main (to rename branch)
+git push -u origin main
+
+
+Branch Commands
+
+git branch (to check branch - and alsoi current branch)
+git branch -M main (to rename branch (current one will be rename))
+git checkout <-branch name->    (to navigate to ther branch)
+git checkout -b <- new branch name -> (to create a new branch)
+git branch -d <-branch name-> (to delete branch , you need to in other branch to delete the selected branch)
+
+to add and commit use the same code.
+
+to push the changed use the branch name
+git push origin <-feature1-> (branch name)
+
+
+To merge the code : branch codes
+Way 1
+git diff <-branch name->   (to compare commits, branches, files & more)
+git merge <-branch name->  (to merge 2 branches)
+
+Way 2
+Create a PR (Pull Request)
+It lets you tell others about changes you've pushed in a repository on GitHub
+ 
+After Merging the code or using PR:
+
+Always pull the code from repo if the merged changes is not visible in the local repo
+
+Use Pull Command:
+git pull origin main
+Used to fetch and download content from a remote repo and immediately update the local repo to match that content.
+
+Resolving Merge Conflicts
+
+An event that takes place when Git is unable to automatically resolve differences in code between two commits.
+Means any changes in the same line between two branches, and when you merge the code it will show Conflict. In this situation you will need to manually solve this conflict.
+
+Undoing Changes
+
+Case 1: Stages Changes
+git reset <-file name-> (for particular file, if it is staged)
+git reset   (for multiple files, if it is staged)
+
+Case 2: Committed changes (for one commit) 
+git reset HEAD~1
+
+Case 3: Committed changes (for many commits)
+git reset <-commit hash->
+git reset --hard <-commit hash->
+
+
+git log: to check the logs
+
+
+Fork:
+A fork is a new repository that shares code and visibility settings with the original "upstream" repository.
+
+Fork is a rough copy.
